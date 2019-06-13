@@ -1077,7 +1077,7 @@ def batch_main():
             flag_tmp.pm = True
             flag_tmp.finetune_physics = True
             name = '{}_{}_ipa'.format(env, seed)
-            flag_tmp.logdir = "/root/results"
+            flag_tmp.logdir = "results"
             flag_tmp.exp = name
             flag_tmp.env = env
             flag_tmp.seed = seed
@@ -1090,7 +1090,7 @@ def batch_main():
             flag_tmp = EasyDict(FLAGS.copy())
             flag_tmp.pm = False
             name = '{}_{}_ppo'.format(env, seed)
-            flag_tmp.logdir = "/root/results"
+            flag_tmp.logdir = "results"
             flag_tmp.exp = name
             flag_tmp.env = env
             flag_tmp.seed = seed

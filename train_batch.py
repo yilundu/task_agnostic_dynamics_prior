@@ -27,11 +27,11 @@ import imageio
 
 from models import PhysNetV2, JunyukRecurrentNet, PhysActionRollout
 
-FLAGS = EasyDict({'balance_frames': True, 'batch': True, 'cliprange': 0.1, 'ent_coeff': 0.01, 'env': 'phys_env', 'exp': 'default', 'finetune_data': '/mnt/nfs/yilundu/phys_prior/test_reduced.npz', 'finetune_epochs': 1, 'finetune_physics': False, 'forward_state_pred': 1, 'gamma': 0.99, 'lam': 0.95, 'log_interval': 1, 'logdir': '/root/results/resource/logs/smoketest', 'lr': 0.00025, 'max_grad_norm': 0.5, 'mixed_finetune': False, 'nenvs': 8, 'nminibatches': 4, 'noptsepochs': 4, 'nsteps': 128, 'num_steps': 32, 'num_timesteps': 10000000.0, 'order': 1, 'pm': False, 'pm_nova': False, 'pm_oracle': False, 'pm_path': '/root/code/policy_physics/policy_physics/physmodel/model_24794', 'pm_rollouts': False, 'pos': False, 'pred_steps': 3, 'random_action': False, 'resume_iter': -1, 'resume_physics_only': False, 'resume_policy_only': False, 'save_iter': 5000, 'seed': 0, 'sonic_joint': False, 'sonic_transfer': False, 'test_phys': True, 'train': True, 'vf_coef': 0.5, 'phys_lr':1e-4, 'model': 'physnet', 'augment': False, 'i2a': False, 'joint_policy': False, 'convlstm': False, 'resume_goal': False, 'resume_forage': False, 'eps_random': False, 'timeskip': 1, 'random_fix': False, 'dm_control': False, 'vis_reward': True, 'blink': False, 'i2a_action': False, 'i2a_action_n': 5})
+FLAGS = EasyDict({'balance_frames': True, 'batch': True, 'cliprange': 0.1, 'ent_coeff': 0.01, 'env': 'phys_env', 'exp': 'default', 'finetune_data': '/mnt/nfs/yilundu/phys_prior/test_reduced.npz', 'finetune_epochs': 1, 'finetune_physics': False, 'forward_state_pred': 1, 'gamma': 0.99, 'lam': 0.95, 'log_interval': 1, 'logdir': '/root/results/resource/logs/smoketest', 'lr': 0.00025, 'max_grad_norm': 0.5, 'mixed_finetune': False, 'nenvs': 8, 'nminibatches': 4, 'noptsepochs': 4, 'nsteps': 128, 'num_steps': 32, 'num_timesteps': 10000000.0, 'order': 1, 'pm': False, 'pm_nova': False, 'pm_oracle': False, 'pm_path': 'physmodel/model_24794', 'pm_rollouts': False, 'pos': False, 'pred_steps': 3, 'random_action': False, 'resume_iter': -1, 'resume_physics_only': False, 'resume_policy_only': False, 'save_iter': 5000, 'seed': 0, 'sonic_joint': False, 'sonic_transfer': False, 'test_phys': True, 'train': True, 'vf_coef': 0.5, 'phys_lr':1e-4, 'model': 'physnet', 'augment': False, 'i2a': False, 'joint_policy': False, 'convlstm': False, 'resume_goal': False, 'resume_forage': False, 'eps_random': False, 'timeskip': 1, 'random_fix': False, 'dm_control': False, 'vis_reward': True, 'blink': False, 'i2a_action': False, 'i2a_action_n': 5})
 
-junyuk_pm_path = '/root/code/policy_physics/policy_physics/physmodel/model_68310'
-convlstm_pm_path = '/root/code/policy_physics/policy_physics/physmodel/model_39688'
-pm_path_blink = '/root/code/policy_physics/policy_physics/physmodel/model_3630'
+junyuk_pm_path = 'physmodel/model_68310'
+convlstm_pm_path = 'physmodel/model_39688'
+pm_path_blink = 'physmodel/model_3630'
 
 assert not (FLAGS.pm and FLAGS.pm_rollouts)
 
